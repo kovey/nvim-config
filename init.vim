@@ -24,8 +24,8 @@ endif
 
 set hlsearch                  "高亮度反白
 set backspace=2               "可随时用倒退键删除
-"set autoindent                 "自动缩排
-"set cindent
+set autoindent                 "自动缩排
+set cindent
 set ruler                      "可显示最后一行的状态
 set showmode                 "左下角那一行的状态
 set wrap                      "自动折行
@@ -33,13 +33,11 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set expandtab                  "将tab替换为相应数量空格
-"set smartindent
+set smartindent
 set fileencodings=uft8-bom,utf8,gbk,gb2312,big5   "打开支持编码的文件
 
-"inoremap ' ''<ESC>i
-"inoremap " ""<ESC>i
-"inoremap ( ()<ESC>i
-"inoremap [ []<ESC>i
-"inoremap { {<CR>}<ESC>O
-
-"autocmd FileType markdown setlocal spell
+cnoremap <C-f> <Right>
+cnoremap <C-b> <Left>
+cnoremap <C-a> <C-o>^
+cnoremap <C-e> <C-o>$
+autocmd FileType markdown setlocal spell
