@@ -137,7 +137,7 @@ function M.config()
 
     require'lspconfig'.gopls.setup{}
 
-    local servers = { 'clangd', 'rust_analyzer', 'pylsp', 'sumneko_lua'}
+    local servers = { 'clangd', 'pylsp', 'sumneko_lua'}
     for _, lsp in pairs(servers) do
         require('lspconfig')[lsp].setup {
             on_attach = on_attach
@@ -267,7 +267,31 @@ function M.config()
         server_filetype_map = {},
     })
 
-    require('rust-tools').setup()
+    local opts = {
+        tools = {
+            runnables = {
+                use_telescope = true
+            },
+            inlay_hints = {
+                auto = true,
+                show_parameter_hints = true,
+                parameter_hints_prefix = "",
+                other_hints_prefix = "",
+            }
+        },
+        server = {
+            on_attach = on_attach,
+            settings = {
+                ["rust-analyzer"] = {
+                    checkOnSave = {
+                        command = "clippy"
+                    }
+                }
+            }
+        }
+    }
+
+    require('rust-tools').setup(opts)
 
 end
 

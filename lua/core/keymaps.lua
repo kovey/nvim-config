@@ -55,7 +55,8 @@ vim.keymap.set('n', '<leader>sw', '/\\<lt>\\><left><left>')
 -- w: workspace
 -- c: inlay hints
 vim.keymap.set('n', '<leader>le', ':Lspsaga show_line_diagnostics<cr>')
-vim.keymap.set('n', '<leader>lE', ':Lspsaga show_cursor_diagnostics<cr>')
+--vim.keymap.set('n', '<leader>lE', ':Lspsaga show_cursor_diagnostics<cr>')
+vim.keymap.set('n', '<CR>', ':Lspsaga show_cursor_diagnostics<cr>')
 vim.keymap.set('n', '<leader>lq', vim.diagnostic.setloclist)
 vim.keymap.set('n', '<leader>lk', vim.lsp.buf.hover)
 vim.keymap.set('n', '<leader>ld', ':Lspsaga preview_definition<cr>')
