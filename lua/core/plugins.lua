@@ -52,8 +52,10 @@ return require('packer').startup(function()
 
 	-- git
 	use {
-		'lewis6991/gitsigns.nvim',
-		tag = 'release',
+        'tanvirtin/vgit.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim'
+        }
 	}
 
 	-- status line
