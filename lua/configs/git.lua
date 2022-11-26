@@ -126,8 +126,8 @@ function M.config()
             end,
             },
             live_gutter = {
-            enabled = true,
-            edge_navigation = true, -- This allows users to navigate within a hunk
+            enabled = false,
+            edge_navigation = false, -- This allows users to navigate within a hunk
             },
             authorship_code_lens = {
             enabled = true,
