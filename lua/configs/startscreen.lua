@@ -11,12 +11,12 @@ function M.config()
         ' ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝',
     }
     dh.custom_center = {
-        {icon = '  ', desc = 'Recently opened files                    ', shortcut = 'n h', action = 'Telescope oldfiles'},
-        {icon = '  ', desc = 'Find  File                               ', shortcut = 'n f', action = 'Telescope find_files'},
-        {icon = '  ', desc = 'File Browser                             ', shortcut = 'n t', action = 'NvimTreeToggle'},
-        {icon = '  ', desc = 'Find  word                               ', shortcut = 'n w', action = 'Telescope live_grep'},
-        {icon = '  ', desc = 'Find  string                             ', shortcut = 'n s', action = 'Telescope grep_string'},
-        {icon = "  ", desc = 'Edit config                              ', shortcut = "n e", action = "edit $MYVIMRC"}
+        {icon = '  ', desc = 'Recently opened files                    ', shortcut = '', action = 'Telescope oldfiles'},
+        {icon = '  ', desc = 'Find File                               ', shortcut = '', action = 'Telescope find_files'},
+        {icon = '  ', desc = 'File Browser                             ', shortcut = '', action = 'NvimTreeToggle'},
+        {icon = '  ', desc = 'Find Word                               ', shortcut = '', action = 'Telescope live_grep'},
+        {icon = '  ', desc = 'Find String                             ', shortcut = '', action = 'Telescope grep_string'},
+        {icon = "  ", desc = 'Edit Config                              ', shortcut = '', action = "edit $MYVIMRC"}
     }
 
     dh.custom_footer = function()
