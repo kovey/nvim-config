@@ -7,6 +7,7 @@ return require('packer').startup(function()
 	use 'dstein64/vim-startuptime'
 	use 'lewis6991/impatient.nvim'
 	use 'nathom/filetype.nvim'
+    use 'glepnir/dashboard-nvim'
 
 	-- buffer
 	use {
@@ -70,14 +71,13 @@ return require('packer').startup(function()
 	-- file telescope
 	use {
 		'nvim-telescope/telescope.nvim',
-		requires = 'nvim-lua/plenary.nvim'
+		requires = {
+            'nvim-lua/plenary.nvim',
+        }
 	}
 
 	-- indent guide
 	use "lukas-reineke/indent-blankline.nvim"
-
-	-- startup screen
-	use 'leslie255/aleph-nvim'
 
 	-- english grammar check
 	use 'rhysd/vim-grammarous'

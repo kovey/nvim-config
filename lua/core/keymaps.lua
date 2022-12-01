@@ -25,6 +25,8 @@ vim.keymap.set('n', '<F3>', ':NvimTreeToggle<cr>')
 vim.keymap.set('n', '<leader>ft', ':NvimTreeToggle<cr>')
 vim.keymap.set('n', '<leader>ff', ':NvimTreeFocus<cr>')
 -- y: telescope
+vim.keymap.set('n', '<F7>', function() require 'telescope.builtin'.live_grep {} end)
+vim.keymap.set('n', '<F8>', function() require 'telescope.builtin'.grep_string {} end)
 vim.keymap.set('n', '<F9>', function() require 'telescope.builtin'.find_files {} end)
 vim.keymap.set('n', '<F10>', function() require 'telescope.builtin'.git_files {} end)
 vim.keymap.set('n', '<F11>', function() require 'telescope.builtin'.buffers {} end)
