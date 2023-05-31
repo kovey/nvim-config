@@ -7,7 +7,10 @@ return require('packer').startup(function()
 	use 'dstein64/vim-startuptime'
 	use 'lewis6991/impatient.nvim'
 	use 'nathom/filetype.nvim'
-    use 'glepnir/dashboard-nvim'
+    use {
+        'glepnir/dashboard-nvim',
+        event = 'VimEnter',
+    }
 
 	-- buffer
 	use {
