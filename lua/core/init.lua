@@ -11,7 +11,12 @@ vim.opt.autowrite      = true
 if (vim.fn.has('termguicolors') == 1) then
 	vim.opt.termguicolors = true
 end
+
+vim.g.mapleader = ';'
+
 -- tabs
+vim.opt.hlsearch = true
+vim.opt.backspace = {2}
 vim.opt.autoindent  = true
 vim.opt.smartindent = true
 vim.opt.showmatch = true
@@ -22,9 +27,12 @@ vim.opt.mouse       = 'a'
 vim.opt.expandtab   = true
 vim.opt.autowrite   = false
 vim.opt.formatoptions = ''
+vim.opt.cindent = true
+vim.opt.ruler = true
+vim.opt.showmode = true
+vim.opt.wrap = true
+vim.opt.fileencodings = {'uft8-bom','utf8','gbk','gb2312','big5'}
 
-require("core.keymaps")
---require("core.dvorak")	-- delete this line if you don't like using DVORAK
 require("core.plugins")
 require("core.gui")
 -- disable some useless standard plugins to save startup time
@@ -54,14 +62,16 @@ require('image').setup {
 -- Load plugin configs
 -- plugins without extra configs are configured directly here
 require("impatient")
+require("configs.ale").config()
 require("configs.autopairs").config()
-require("configs.autocomplete").config()
-require("configs.symbols_outline").config()
-require("configs.statusline").config()
-require("configs.filetree").config()
-require("configs.treesitter").config()
-require("configs.startscreen").config()
-require("configs.git").config()
 require("configs.bufferline").config()
-require("configs.grammar").config()
+require("configs.coc").config()
+require("configs.easymotion").config()
+require("configs.filetree").config()
+require("configs.fzf").config()
+require("configs.git").config()
+require("configs.startscreen").config()
+require("configs.statusline").config()
+require("configs.symbols_outline").config()
 require("configs.terminal").config()
+require("configs.treesitter").config()
