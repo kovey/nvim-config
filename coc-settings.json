@@ -1,0 +1,38 @@
+{
+    "languageserver": {
+        "golang": {
+            "command": "go-langserver",
+            "filetypes": ["go"],
+            "rootPatterns": [
+                "go.mod"
+            ],
+            "requireRootPattern": true,
+            "initializationOptions": {
+                "gocodeCompletionEnabled": true,
+                "diagnosticsEnabled": true,
+                "lintTool": "golangci-lint"
+            }
+        },
+        "intelephense": {
+            "command": "intelephense",
+            "args": ["--stdio"],
+            "filetypes": ["php"],
+            "rootPatterns": [
+                "composer.json"
+            ],
+            "initializationOptions": {
+                "storagePath": "/tmp/intelephense"
+            }
+        },
+        "lua": {
+            "command": "~/.config/coc/extensions/coc-lua-data/lua-language-server/bin/lua-language-server",
+            "rootPatterns": [".git", ".luarc"],
+            "filetypes": ["lua"]
+        }
+    },
+    "suggest.noselect": false,
+    "diagnostic.displayByAle": true,
+    "suggest.floatEnable": true,
+    "diagnostic.enable": true,
+    "vetur.useWorkspaceDependencies": true,
+}
